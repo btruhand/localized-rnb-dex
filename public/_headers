@@ -1,0 +1,6 @@
+/sprites/*
+  Cache-Control: public, max-age=604800
+/audio/*
+  Cache-Control: public, max-age=604800
+/style/*
+  Cache-Control: public, max-age=604800

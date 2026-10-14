@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "localized-rnb-dex",
+  "compatibility_date": "2025-01-01",
+  "build": {
+    "command": "npm run build"
+  },
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "single-page-application"
+  }
+}

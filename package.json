@@ -1,0 +1,25 @@
+{
+  "name": "localized-rnb-dex",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pok\u00e9dex for the Pok\u00e9mon Run & Bun ROM hack. Fully static; every asset is vendored in the repo.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:abilities && npm run build:articles",
+    "predev": "npm run build",
+    "dev": "node scripts/serve.mjs",
+    "deploy": "wrangler deploy",
+    "build:abilities": "node scripts/build-abilities.mjs",
+    "build:articles": "node scripts/build-articles.mjs",
+    "fetch:assets": "node scripts/fetch-assets.mjs",
+    "find:missing": "node scripts/find-missing-assets.mjs",
+    "check:offline": "node scripts/check-offline.mjs",
+    "pretest": "npm run build",
+    "test": "node --test scripts/data.test.mjs"
+  },
+  "devDependencies": {
+    "showdown": "^2.1.0",
+    "wrangler": "^4.0.0"
+  }
+}
